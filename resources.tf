@@ -10,7 +10,7 @@ resource "azurerm_automation_account" "automation_account" {
 
 
 resource "azurerm_monitor_diagnostic_setting" "aa_monitor_settings" {
-    count = var.enable__diagnostic_settings ? 1:0
+    count = var.enable_diagnostic_settings ? 1:0
 
     name                       = var.aa_diagnostic_settings.name
     target_resource_id         = azurerm_automation_account.automation_account.id
